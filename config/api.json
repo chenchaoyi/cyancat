@@ -1,5 +1,13 @@
 {
   "mobiledriver": {
+    "status": {
+      "schema": "http",
+      "method": [ "GET" ]
+    },
+    "sessions": {
+      "schema": "http",
+      "method": [ "GET" ]
+    },
     "session": {
       "schema": "http",
       "method": [ "POST" ],
