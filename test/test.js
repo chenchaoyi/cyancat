@@ -5,11 +5,10 @@ var PurpleCat = require('../lib/purplecat');
 
 var api = Bluecat.Api('mobiledriver');
 
-var service = new Bluecat.ServiceSync(api, Config.server.host, {
+var blueCatService = new Bluecat.ServiceSync(api, Config.server.host, {
   followAllRedirects: true
 });
-service.setProxy(Config.proxy);
+blueCatService.setProxy(Config.proxy);
 
-var purpleCat = new PurpleCat(service);
-exports.mobiledriver = service;
+var purpleCat = new PurpleCat(blueCatService);
 exports.purpleCat = purpleCat;

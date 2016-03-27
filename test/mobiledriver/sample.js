@@ -5,63 +5,63 @@ var Config = require('config');
 
 describe('Sign in test', function() {
   before(function() {
-    service = test.mobiledriver;
-    purpleCat = test.purpleCat;
+    driver = test.purpleCat;
   });
 
   it('sample test for sign in [C001]', function(done) {
-    service.run(function() {
+    driver.run(function() {
       // start session
-      var r = purpleCat.init(Config.capabilities);
+      var r = driver.init(Config.capabilities);
 
       // find popup
-      r = purpleCat.findElements('Don’t Allow');
+      //r = driver.findElements('Don’t Allow');
+      r = driver.waitForElement('Don’t Allow1');
       var popUpId = r.data.body.value[0].ELEMENT
 
       // click on popup not allow
-      r = purpleCat.clickElement(popUpId);
+      r = driver.clickElement(popUpId);
 
-      purpleCat.sleep(1000);
+      driver.sleep(1000);
 
       // find 2ed popup
-      r = purpleCat.findElements('Don’t Allow');
+      r = driver.findElements('Don’t Allow');
       popUpId = r.data.body.value[0].ELEMENT
 
       // click on 2ed popup not allow
-      r = purpleCat.clickElement(popUpId);
+      r = driver.clickElement(popUpId);
 
       // find login
-      r = purpleCat.findElements('Sign In');
+      r = driver.findElements('Sign In');
       popUpId = r.data.body.value[0].ELEMENT
 
       // click on sign in
-      r = purpleCat.clickElement(popUpId);
+      r = driver.clickElement(popUpId);
 
       // find email text field
-      r = purpleCat.findElements('//UIATextField[@name="email_field"]', 'xpath');
+      r = driver.findElements('//UIATextField[@name="email_field"]', 'xpath');
       popUpId = r.data.body.value[0].ELEMENT
 
       // type email
-      r = purpleCat.typeElement(popUpId, 'wmt678+checkout1@gmail.com');
+      r = driver.typeElement(popUpId, 'wmt678+checkout1@gmail.com');
 
       // find password text field
-      r = purpleCat.findElements('password_field');
+      r = driver.findElements('password_field');
       popUpId = r.data.body.value[0].ELEMENT
 
       // type pwd
-      r = purpleCat.typeElement(popUpId, 'Welcome1');
+      r = driver.typeElement(popUpId, 'Welcome1');
 
       // find signin button
-      r = purpleCat.findElements('//UIAButton[@name="Sign In"]', 'xpath');
+      r = driver.findElements('//UIAButton[@name="Sign In"]', 'xpath');
       popUpId = r.data.body.value[0].ELEMENT
 
       // click on sign in
-      r = purpleCat.clickElement(popUpId);
+      r = driver.clickElement(popUpId);
 
       // quit session
-      r = purpleCat.quit();
+      r = driver.quit();
 
-      purpleCat.sleep(5000);
+      driver.sleep(5000);
 
       done();
     });
