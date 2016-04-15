@@ -5,7 +5,15 @@ var Config = require('config');
 
 describe('Sign in test', function() {
   before(function() {
-    driver = test.purpleCat;
+    driver = test.cyanCat;
+  });
+
+  after(function(done) {
+    driver.run(function() {
+      // quit session
+      driver.quit();
+      done();
+    });
   });
 
   it('sample test for sign in [C001]', function(done) {
@@ -14,9 +22,8 @@ describe('Sign in test', function() {
       var r = driver.init(Config.capabilities);
 
       // find popup
-      //r = driver.findElements('Don’t Allow');
-      r = driver.waitForElement('Don’t Allow1');
-      var popUpId = r.data.body.value[0].ELEMENT
+      // var popUpId = driver.findElement('Don’t Allow1');
+      var popUpId = driver.waitForElement('Don’t Allow');
 
       // click on popup not allow
       r = driver.clickElement(popUpId);
@@ -57,9 +64,6 @@ describe('Sign in test', function() {
 
       // click on sign in
       r = driver.clickElement(popUpId);
-
-      // quit session
-      r = driver.quit();
 
       driver.sleep(5000);
 

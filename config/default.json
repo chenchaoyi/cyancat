@@ -1,6 +1,6 @@
 {
   "env": "production",
-  "proxy": null,
+  //"proxy": "http://127.0.0.1:8888",
   "server": {
     "host": "http://localhost:4723/wd/hub"
   },

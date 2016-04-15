@@ -1,7 +1,6 @@
-
 var Config = require('config');
 var Bluecat = require('bluecat');
-var PurpleCat = require('../lib/purplecat');
+var CyanCat = require('../lib/cyancat');
 
 var api = Bluecat.Api('mobiledriver');
 
@@ -10,5 +9,5 @@ var blueCatService = new Bluecat.ServiceSync(api, Config.server.host, {
 });
 blueCatService.setProxy(Config.proxy);
 
-var purpleCat = new PurpleCat(blueCatService);
-exports.purpleCat = purpleCat;
+var cyanCat = new CyanCat(blueCatService);
+exports.cyanCat = cyanCat;

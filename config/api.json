@@ -19,6 +19,8 @@
           "method": [ "POST" ]
         },
         "element": {
+          "schema": "http",
+          "method": [ "POST" ],
           "${elementId}": {
             "click": {
               "schema": "http",
