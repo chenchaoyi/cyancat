@@ -1,6 +1,10 @@
-# Cyancat
-Mobile JSON Wire Javascript binding using [bluecat](https://github.com/chenchaoyi/bluecat) underlayer
+# Cyancat Example
 
-`Cyancat` let you write Appium mobile automation test in a synchronized way in Javascript.
+```
+./node_modules/.bin/mocha test/mobiledriver/sample.js
+
+NODE_CONFIG='{"proxy": "http://127.0.0.1:8888"}'
+./node_modules/.bin/mocha test/mobiledriver/sample.js
+```
 
 ## Coming soon

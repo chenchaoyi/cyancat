@@ -4,14 +4,13 @@
   "server": {
     "host": "http://localhost:4723/wd/hub"
   },
-  "testServer": "http://localhost:4723/wd/hub",
   "capabilities": {
-    "appium-version": "1.4.16",
+    "appiumVersion": "1.4.16",
     "platformName": "iOS",
     "platformVersion": "8.4",
     "deviceName": "iPhone 6",
     "sendKeyStrategy": "setValue",
-    "waitForAppScript": "true",
+    "waitForAppScript": true,
     "app": "../../app/test.app"
   }
 }
