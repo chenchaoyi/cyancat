@@ -6,7 +6,7 @@ var Util = require('util');
 
 var internals = {};
 
-internals.CyanCat = function (bluecatService, options) {
+internals.PurpleCat = function (bluecatService, options) {
   options = options || {};
   options.maxWaitTime = options.maxWaitTime || 30000;
 
@@ -17,12 +17,12 @@ internals.CyanCat = function (bluecatService, options) {
 
 // Set max wait timeout period, in milliseconds
 // default value is 60 seconds
-internals.CyanCat.prototype.setWaitTimeout = function(timeout) {
+internals.PurpleCat.prototype.setWaitTimeout = function(timeout) {
   this.maxWaitTime = timeout;
 };
 
 // Verify response statusCode and return more informative information when failed
-internals.CyanCat.prototype.checkStatus = function(res, expectedStatus) {
+internals.PurpleCat.prototype.checkStatus = function(res, expectedStatus) {
   if (Object.prototype.toString.call(expectedStatus) === '[object Array]') {
     expect(expectedStatus).to.include(res.data.statusCode,
         'Expected status code ' + res.data.statusCode + ' to equal ' + expectedStatus.join('|') +
@@ -38,12 +38,12 @@ internals.CyanCat.prototype.checkStatus = function(res, expectedStatus) {
 
 // All Mobile JSON Wire protocol operations should be put sequentially in this function's
 // parameter, so they'll be executed in order
-internals.CyanCat.prototype.run = function (fiberFuncs){
+internals.PurpleCat.prototype.run = function (fiberFuncs){
   return this.service.run(fiberFuncs);
-};
+}
 
 // POST /session
-internals.CyanCat.prototype.init = function (capabilities){
+internals.PurpleCat.prototype.init = function (capabilities){
   var r = this.service.session.POST({
     body: {
       desiredCapabilities: capabilities
@@ -51,7 +51,7 @@ internals.CyanCat.prototype.init = function (capabilities){
   });
   this.checkStatus(r, 200);
   expect(r.data.body.sessionId).to.be.a('string');
-  this.sessionId = r.data.body.sessionId;
+  this.sessionId = r.data.body.sessionId
   return r;
 };
 
@@ -64,7 +64,7 @@ internals.CyanCat.prototype.init = function (capabilities){
 //	}],
 //	"sessionId": "124d29e3-2a8c-4953-a3b0-4662873ec25e"
 // }
-internals.CyanCat.prototype.findElements = function (value, using){
+internals.PurpleCat.prototype.findElements = function (value, using){
   using = using || 'accessibility id';
   var r = this.service.session['${sessionId}'].elements.POST({
     params: {
@@ -74,7 +74,7 @@ internals.CyanCat.prototype.findElements = function (value, using){
       using: using,
       value: value
     }
-  });
+  })
   this.checkStatus(r, 200);
   return r;
 };
@@ -88,7 +88,7 @@ internals.CyanCat.prototype.findElements = function (value, using){
 //	},
 //	"sessionId": "124d29e3-2a8c-4953-a3b0-4662873ec25e"
 // }
-internals.CyanCat.prototype.findElement = function (value, using){
+internals.PurpleCat.prototype.findElement = function (value, using){
   using = using || 'accessibility id';
   var r = this.service.session['${sessionId}'].element.POST({
     params: {
@@ -98,7 +98,7 @@ internals.CyanCat.prototype.findElement = function (value, using){
       using: using,
       value: value
     }
-  });
+  })
   this.checkStatus(r, 200);
   return r.data.body.value.ELEMENT;
 };
@@ -112,13 +112,13 @@ internals.CyanCat.prototype.findElement = function (value, using){
 //	}],
 //	"sessionId": "124d29e3-2a8c-4953-a3b0-4662873ec25e"
 // }
-internals.CyanCat.prototype.clickElement = function (elementId){
+internals.PurpleCat.prototype.clickElement = function (elementId){
   var r = this.service.session['${sessionId}'].element['${elementId}'].click.POST({
     params: {
       sessionId: this.sessionId,
       elementId: elementId
     }
-  });
+  })
   this.checkStatus(r, 200);
   return r;
 };
@@ -132,7 +132,7 @@ internals.CyanCat.prototype.clickElement = function (elementId){
 //	}],
 //	"sessionId": "124d29e3-2a8c-4953-a3b0-4662873ec25e"
 // }
-internals.CyanCat.prototype.typeElement = function (elementId, value) {
+internals.PurpleCat.prototype.typeElement = function (elementId, value) {
   var r = this.service.session['${sessionId}'].element['${elementId}'].value.POST({
     params: {
       sessionId: this.sessionId,
@@ -141,27 +141,27 @@ internals.CyanCat.prototype.typeElement = function (elementId, value) {
     body: {
       value: [value]
     }
-  });
+  })
   this.checkStatus(r, 200);
   return r;
 };
 
 // quit session
-internals.CyanCat.prototype.quit = function () {
+internals.PurpleCat.prototype.quit = function () {
   var r = this.service.session['${sessionId}'].DELETE({
     params: {
       sessionId: this.sessionId
     }
-  });
+  })
   this.checkStatus(r, 200);
   return r;
 };
 
 // keep finding element until it is displayed or timed out
-internals.CyanCat.prototype.waitForElement = function (value, using, timeout){
+internals.PurpleCat.prototype.waitForElement = function (value, using, timeout){
   using = using || 'accessibility id';
   timeout = timeout || this.maxWaitTime;
-  // var r = this.findElements(value, using);
+  //var r = this.findElements(value, using);
   var r;
   var waitTime = 0;
   while (waitTime <= timeout) {
@@ -174,7 +174,7 @@ internals.CyanCat.prototype.waitForElement = function (value, using, timeout){
         using: using,
         value: value
       }
-    });
+    })
     if (r.data.statusCode === 200) {
       break;
     }
@@ -190,8 +190,8 @@ internals.CyanCat.prototype.waitForElement = function (value, using, timeout){
 };
 
 // sleep in ms
-internals.CyanCat.prototype.sleep = function(period) {
+internals.PurpleCat.prototype.sleep = function(period) {
   this.service.sleep(period);
-};
+}
 
-exports = module.exports = internals.CyanCat;
+exports = module.exports = internals.PurpleCat;

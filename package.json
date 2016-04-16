@@ -1,13 +1,35 @@
 {
-  "name": "mobiledriver",
+  "name": "cyancat",
   "version": "0.0.1",
+  "author": "ccy <ccy.chenchaoyi@gmail.com>",
+  "description": "A synchronized version of Appium Javascript binding",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenchaoyi/cyancat"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.21"
+  },
+  "keywords": [
+    "testing",
+    "bluecat",
+    "appium",
+    "selenium"
+  ],
   "dependencies": {
-    "appium": "1.4.16",
     "bluecat": "^1.0.3",
     "chai": "^3.5.0",
-    "config": "^1.19.0",
-    "mocha": "^2.4.5",
-    "mocha-espresso": "0.0.24",
-    "mocha-multi": "^0.9.0"
+    "config": "^1.19.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "grunt-cli": "^1.2.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jscs": "^2.8.0"
   }
 }

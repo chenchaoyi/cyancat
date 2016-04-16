@@ -1,0 +1,13 @@
+{
+  "name": "mobiledriver",
+  "version": "0.0.1",
+  "dependencies": {
+    "appium": "1.4.16",
+    "bluecat": "^1.0.3",
+    "chai": "^3.5.0",
+    "config": "^1.19.0",
+    "mocha": "^2.4.5",
+    "mocha-espresso": "0.0.24",
+    "mocha-multi": "^0.9.0"
+  }
+}

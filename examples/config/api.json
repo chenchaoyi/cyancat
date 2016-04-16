@@ -1,0 +1,66 @@
+{
+  "mobiledriver": {
+    "status": {
+      "schema": "http",
+      "method": [ "GET" ]
+    },
+    "sessions": {
+      "schema": "http",
+      "method": [ "GET" ]
+    },
+    "session": {
+      "schema": "http",
+      "method": [ "POST" ],
+      "${sessionId}": {
+        "schema": "http",
+        "method": [ "POST", "DELETE" ],
+        "elements": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
+        "element": {
+          "schema": "http",
+          "method": [ "POST" ],
+          "${elementId}": {
+            "click": {
+              "schema": "http",
+              "method": [ "POST" ]
+            },
+            "submit": {
+              "schema": "http",
+              "method": [ "POST" ]
+            },
+            "text": {
+              "schema": "http",
+              "method": [ "GET" ]
+            },
+            "name": {
+              "schema": "http",
+              "method": [ "GET" ]
+            },
+            "value": {
+              "schema": "http",
+              "method": [ "POST" ]
+            },
+            "clear": {
+              "schema": "http",
+              "method": [ "POST" ]
+            }
+          }
+        },
+        "execute": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
+        "execute_sync": {
+          "schema": "http",
+          "method": [ "POST" ]
+        }
+      }
+    },
+    "sessions": {
+      "schema": "http",
+      "method": [ "GET" ]
+    }
+  }
+}
