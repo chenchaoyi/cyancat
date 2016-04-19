@@ -25,7 +25,7 @@ $ npm install cyancat
 ```
 ---
 
-## API
+## API (stay tuned, more to come...)
 #### `setWaitTimeout(timeout)`
 #### `init(capabilities)`
 #### `findElements(locator, using)`
