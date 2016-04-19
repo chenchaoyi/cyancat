@@ -12,7 +12,8 @@
 ## Table of contents
 
 - [Installation](#installation)
-- [Usage](#usage)
+- [API](#api)
+- [Example](#example)
 - [Command line tool](#command-line-tool)
 - [License](#license)
 
@@ -24,7 +25,7 @@ $ npm install cyancat
 ```
 ---
 
-## Usage
+## API
 #### `setWaitTimeout(timeout)`
 #### `init(capabilities)`
 #### `findElements(locator, using)`
@@ -37,6 +38,11 @@ $ npm install cyancat
 #### `waitForElement(locator, using, timeout)`
 #### `sleep(ms)`
 
+---
+
+## Example
+#### A full test framework example including the app is available in the [`examples`](https://github.com/chenchaoyi/cyancat/tree/master/examples) folder
+---
 
 ## License
 Licensed under the [MIT](http://opensource.org/licenses/MIT)
