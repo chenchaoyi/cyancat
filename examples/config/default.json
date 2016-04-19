@@ -5,12 +5,10 @@
     "host": "http://localhost:4723/wd/hub"
   },
   "capabilities": {
-    "appiumVersion": "1.4.16",
     "platformName": "iOS",
-    "platformVersion": "8.4",
+    "platformVersion": "9.2",
     "deviceName": "iPhone 6",
     "sendKeyStrategy": "setValue",
-    "waitForAppScript": true,
-    "app": "../../app/test.app"
+    "app": "./app/example.app"
   }
 }

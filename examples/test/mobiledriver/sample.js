@@ -21,50 +21,27 @@ describe('Sign in test', function() {
       // start session
       var r = driver.init(Config.capabilities);
 
-      // find popup
-      // var popUpId = driver.findElement('Don’t Allow1');
-      var popUpId = driver.waitForElement('Don’t Allow');
+      // find Add button
+      var elementId = driver.waitForElement('Add');
+      // click on Add button
+      r = driver.clickElement(elementId);
 
-      // click on popup not allow
-      r = driver.clickElement(popUpId);
+      // find summary title text field
+      // r = driver.findElements('//UIATextField[@name="itemTitle"]', 'xpath');
+      elementId = driver.waitForElement('itemTitle');
+      // type memo summary
+      driver.typeElement(elementId, 'memo test summary');
 
-      driver.sleep(1000);
+      // find memo detail
+      elementId = driver.waitForElement('itemNotes');
+      // type memo detail
+      driver.typeElement(elementId, 'memo test details');
 
-      // find 2ed popup
-      r = driver.findElements('Don’t Allow');
-      popUpId = r.data.body.value[0].ELEMENT
-
-      // click on 2ed popup not allow
-      r = driver.clickElement(popUpId);
-
-      // find login
-      r = driver.findElements('Sign In');
-      popUpId = r.data.body.value[0].ELEMENT
-
-      // click on sign in
-      r = driver.clickElement(popUpId);
-
-      // find email text field
-      r = driver.findElements('//UIATextField[@name="email_field"]', 'xpath');
-      popUpId = r.data.body.value[0].ELEMENT
-
-      // type email
-      r = driver.typeElement(popUpId, 'wmt678+checkout1@gmail.com');
-
-      // find password text field
-      r = driver.findElements('password_field');
-      popUpId = r.data.body.value[0].ELEMENT
-
-      // type pwd
-      r = driver.typeElement(popUpId, 'Welcome1');
-
-      // find signin button
-      r = driver.findElements('//UIAButton[@name="Sign In"]', 'xpath');
-      popUpId = r.data.body.value[0].ELEMENT
-
-      // click on sign in
-      r = driver.clickElement(popUpId);
-
+      // find Done button
+      var elementId = driver.waitForElement('Done');
+      // click on Done button
+      r = driver.clickElement(elementId);
+      
       driver.sleep(5000);
 
       done();
