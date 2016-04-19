@@ -26,6 +26,10 @@
               "schema": "http",
               "method": [ "POST" ]
             },
+            "displayed": {
+              "schema": "http",
+              "method": [ "GET" ]
+            },
             "submit": {
               "schema": "http",
               "method": [ "POST" ]

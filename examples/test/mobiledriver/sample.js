@@ -21,27 +21,30 @@ describe('Sign in test', function() {
       // start session
       var r = driver.init(Config.capabilities);
 
-      // find Add button
-      var elementId = driver.waitForElement('Add');
-      // click on Add button
-      r = driver.clickElement(elementId);
+      // find and click on Add button
+      r = driver.clickEl('Add');
 
-      // find summary title text field
-      // r = driver.findElements('//UIATextField[@name="itemTitle"]', 'xpath');
-      elementId = driver.waitForElement('itemTitle');
-      // type memo summary
-      driver.typeElement(elementId, 'memo test summary');
+      // find memo summary text field and type value
+      // driver.typeEl('memo test summary', '//UIATextField[@name="itemTitle"]', 'xpath');
+      driver.typeEl('memo test summary 1', 'itemTitle');
 
-      // find memo detail
-      elementId = driver.waitForElement('itemNotes');
-      // type memo detail
-      driver.typeElement(elementId, 'memo test details');
+      // find memo detail text field and type value
+      driver.typeEl('memo test details 1', 'itemNotes');
 
-      // find Done button
-      var elementId = driver.waitForElement('Done');
-      // click on Done button
-      r = driver.clickElement(elementId);
-      
+      // find and click on Done button
+      r = driver.clickEl('Done');
+
+      // add another memo
+      r = driver.clickEl('Add');
+      driver.typeEl('memo test summary 2', 'itemTitle');
+      driver.typeEl('memo test details 2', 'itemNotes');
+      r = driver.clickEl('Done');
+
+      // delete first memo
+      driver.sleep(5000);
+      r = driver.clickEl('//UIATableCell[@name = "memo test summary 1"]', 'xpath');
+      r = driver.clickEl('Delete');
+
       driver.sleep(5000);
 
       done();
