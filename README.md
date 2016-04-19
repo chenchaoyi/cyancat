@@ -31,7 +31,7 @@ $ npm install cyancat
 #### `findElement(locator, using)`
 #### `clickElement(elementId)`
 #### `clickEl(locator, using, timeout)`
-#### `typeElement(elementId, value)`
+#### `typeElement(value, elementId)`
 #### `typeEl(value, locator, using, timeout)`
 #### `quite()`
 #### `waitForElement(locator, using, timeout)`
