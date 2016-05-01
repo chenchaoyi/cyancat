@@ -1,8 +1,7 @@
 # Cyancat
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status](https://travis-ci.org/chenchaoyi/cyancat.
-svg?branch=master)](https://travis-ci.org/chenchaoyi/cyancat)
+[![Build Status](https://travis-ci.org/chenchaoyi/cyancat.svg?branch=master)](https://travis-ci.org/chenchaoyi/cyancat)
 [![Dependency Status][david-image]][david-url]
 [![Downloads][downloads-image]][downloads-url]
 
