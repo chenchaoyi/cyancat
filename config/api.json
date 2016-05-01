@@ -4,16 +4,98 @@
       "schema": "http",
       "method": [ "GET" ]
     },
-    "sessions": {
-      "schema": "http",
-      "method": [ "GET" ]
-    },
     "session": {
       "schema": "http",
       "method": [ "POST" ],
       "${sessionId}": {
         "schema": "http",
         "method": [ "POST", "DELETE" ],
+        "url": {
+          "schema": "http",
+          "method": [ "GET", "POST" ]
+        },
+        "source": {
+          "schema": "http",
+          "method": [ "GET" ]
+        },
+        "timeouts": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
+        "cookie": {
+          "schema": "http",
+          "method": [ "POST", "DELETE" ],
+          "${cookieName}": {
+            "schema": "http",
+            "method": [ "GET", "DELETE" ]
+          }
+        },
+        "actions": {
+          "schema": "http",
+          "method": [ "DELETE", "POST" ]
+        },
+        "back": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
+        "screenshot": {
+          "schema": "http",
+          "method": [ "GET" ]
+        },
+        "forward": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
+        "alert": {
+          "dismiss": {
+            "schema": "http",
+            "method": [ "POST" ]
+          },
+          "accept": {
+            "schema": "http",
+            "method": [ "POST" ]
+          },
+          "text": {
+            "schema": "http",
+            "method": [ "POST", "GET" ]
+          }
+        },
+        "refresh": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
+        "title": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
+        "window": {
+          "schema": "http",
+          "method": [ "GET", "DELETE", "POST" ],
+          "handles": {
+            "schema": "http",
+            "method": [ "GET" ]
+          },
+          "fullscreen": {
+            "schema": "http",
+            "method": [ "POST" ]
+          },
+          "maximize": {
+            "schema": "http",
+            "method": [ "POST" ]
+          },
+          "size": {
+            "schema": "http",
+            "method": [ "GET", "POST" ]
+          }
+        },
+        "frame": {
+          "schema": "http",
+          "method": [ "POST" ],
+          "parent": {
+            "schema": "http",
+            "method": [ "GET", "POST" ]
+          }
+        },
         "elements": {
           "schema": "http",
           "method": [ "POST" ]
@@ -21,8 +103,32 @@
         "element": {
           "schema": "http",
           "method": [ "POST" ],
+          "active": {
+            "schema": "http",
+            "method": [ "GET" ]
+          },
           "${elementId}": {
+            "element": {
+              "schema": "http",
+              "method": [ "POST" ]
+            },
+            "elements": {
+              "schema": "http",
+              "method": [ "POST" ]
+            },
+            "screenshot": {
+              "schema": "http",
+              "method": [ "GET" ]
+            },
+            "selected": {
+              "schema": "http",
+              "method": [ "GET" ]
+            },
             "click": {
+              "schema": "http",
+              "method": [ "POST" ]
+            },
+            "sendKeys": {
               "schema": "http",
               "method": [ "POST" ]
             },
@@ -46,15 +152,49 @@
               "schema": "http",
               "method": [ "POST" ]
             },
+            "rect": {
+              "schema": "http",
+              "method": [ "GET" ]
+            },
+            "enabled": {
+              "schema": "http",
+              "method": [ "GET" ]
+            },
             "clear": {
               "schema": "http",
               "method": [ "POST" ]
+            },
+            "attribute": {
+              "${attributeName}": {
+                "schema": "http",
+                "method": [ "GET" ]
+              }
+            },
+            "property": {
+              "${propertyName}": {
+                "schema": "http",
+                "method": [ "GET" ]
+              }
+            },
+            "css": {
+              "${cssName}": {
+                "schema": "http",
+                "method": [ "GET" ]
+              }
             }
           }
         },
         "execute": {
           "schema": "http",
-          "method": [ "POST" ]
+          "method": [ "POST" ],
+          "sync": {
+            "schema": "http",
+            "method": [ "POST" ]
+          },
+          "async": {
+            "schema": "http",
+            "method": [ "POST" ]
+          }
         },
         "execute_sync": {
           "schema": "http",

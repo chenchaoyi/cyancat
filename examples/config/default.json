@@ -1,9 +1,7 @@
 {
   "env": "production",
   //"proxy": "http://127.0.0.1:8888",
-  "server": {
-    "host": "http://localhost:4723/wd/hub"
-  },
+  "server": "http://localhost:4723/wd/hub",
   "capabilities": {
     "platformName": "iOS",
     "platformVersion": "9.2",
