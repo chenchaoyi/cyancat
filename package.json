@@ -23,7 +23,7 @@
     "config": "^1.19.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha test/"
+    "test": "./node_modules/.bin/mocha --timeout 60000 test/"
   },
   "devDependencies": {
     "mocha": "^2.3.4",
