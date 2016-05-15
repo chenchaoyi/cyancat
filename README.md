@@ -38,7 +38,7 @@ stay tuned, more to come...
 #### `clickEl(locator, using, timeout)`
 #### `typeElement(value, elementId)`
 #### `typeEl(value, locator, using, timeout)`
-#### `quite()`
+#### `quit()`
 #### `waitForElement(locator, using, timeout)`
 #### `sleep(ms)`
 
