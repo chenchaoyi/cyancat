@@ -36,7 +36,7 @@ $ appium-doctor --ios
 # Run all the tests:
 ./node_modules/.bin/mocha test/mobiledriver/sample.js
 
-# Run all the tests with all Appium command traffic in Charles proxy:
+# Run all the tests with all Appium command traffic in Charles proxy (https://www.charlesproxy.com/):
 NODE_CONFIG='{"proxy": "http://127.0.0.1:8888"}' ./node_modules/.bin/mocha test/mobiledriver/sample.js
 ```
 
