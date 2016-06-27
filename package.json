@@ -18,18 +18,18 @@
     "selenium"
   ],
   "dependencies": {
-    "bluecat": "1.0.6",
+    "bluecat": "1.0.8",
     "chai": "^3.5.0",
-    "config": "^1.19.0"
+    "config": "^1.21.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --timeout 60000 test/"
   },
   "devDependencies": {
-    "mocha": "^2.3.4",
+    "mocha": "^2.5.3",
     "grunt-cli": "^1.2.0",
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-jscs": "^2.8.0"
+    "grunt-jscs": "^3.0.1"
   }
 }
