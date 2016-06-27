@@ -8,7 +8,7 @@
 
 [Mobile JSON Wire](https://github.com/SeleniumHQ/mobile-spec/blob/master/spec-draft.md) Javascript binding using [bluecat](https://github.com/chenchaoyi/bluecat) underlayer
 
-*`Cyancat`* let you write Appium mobile automation test in a synchronized way in Javascript:
+**Cyancat** let you write Appium mobile automation test in a synchronized way in Javascript:
 ```javascript
   it('sample test for sign in', function(done) {
     driver.run(function() {
