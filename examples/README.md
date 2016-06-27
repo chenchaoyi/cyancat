@@ -28,7 +28,7 @@ $ appium-doctor --ios
 #### start Appium server (from this folder):
 
 ```bash
-node node_modules/.bin/appium
+./node_modules/.bin/appium
 ```
 
 #### run tests:
