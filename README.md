@@ -6,7 +6,7 @@
 [![Downloads][downloads-image]][downloads-url]
 
 
-[Mobile JSON Wire](https://github.com/SeleniumHQ/mobile-spec/blob/master/spec-draft.md) Javascript binding using [bluecat](https://github.com/chenchaoyi/bluecat) underlayer
+[Mobile JSON Wire](https://github.com/SeleniumHQ/mobile-spec/blob/master/spec-draft.md) Javascript binding, best for [Appium](http://appium.io/) native app test automation.
 
 **Cyancat** let you write Appium mobile automation test in a synchronized way in Javascript:
 ```javascript
@@ -31,12 +31,19 @@
     });
 ```
 
+* Built-in element visibility check before any operation, no `driver.sleep(1000)` anymore
+* Easily config selenium protocol timeout
+* You just don't like [method chaining](https://en.wikipedia.org/wiki/Method_chaining) style and would like to insert more complex stuff between actions
+* [Convenience and well documented methods](#API) that are more human friendly than [WD.js](https://github.com/admc/wd)
+* The `cyancat` [command line interface](#command-line-tool) comes with a nice configuration utility that helps you to create your test framework in less than a minute.
+
 ## Table of contents
 
 - [Installation](#installation)
 - [API](#api)
 - [Example](#example)
 - [Command line tool](#command-line-tool)
+- [Why the name Cyancat](#why-the-name)
 - [License](#license)
 
 ---
@@ -68,6 +75,9 @@ stay tuned, more to come...
 ## Example
 #### A full test framework example including the app is available in the [`examples`](https://github.com/chenchaoyi/cyancat/tree/master/examples) folder
 ---
+
+## Why the name
+Because **Cyancat** uses [Bluecat](https://github.com/chenchaoyi/bluecat) underlayer, and I expect tests written in Cyancat stays green... I know it's so cold.
 
 ## License
 Licensed under the [MIT](http://opensource.org/licenses/MIT)
