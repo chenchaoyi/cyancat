@@ -34,7 +34,7 @@
 * Built-in element visibility check before any operation, no `driver.sleep(1000)` anymore
 * Easily config selenium protocol timeout
 * You just don't like [method chaining](https://en.wikipedia.org/wiki/Method_chaining) style and would like to insert more complex stuff between actions
-* [Convenience and well documented methods](#API) that are more human friendly than [WD.js](https://github.com/admc/wd)
+* [Convenience and well documented methods](#api) that are more human friendly than [WD.js](https://github.com/admc/wd)
 * The `cyancat` [command line interface](#command-line-tool) comes with a nice configuration utility that helps you to create your test framework in less than a minute.
 
 ## Table of contents
