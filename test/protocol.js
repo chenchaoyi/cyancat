@@ -22,7 +22,7 @@ var s = Http.createServer(function(req, res) {
       url: req.url,
       sessionId: 'test-session-id',
       requestBody: JSON.parse(requestBody)
-    }
+    };
     res.end(JSON.stringify(responseBody));
   });
 });

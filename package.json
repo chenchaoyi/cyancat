@@ -1,6 +1,6 @@
 {
   "name": "cyancat",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "ccy <ccy.chenchaoyi@gmail.com>",
   "description": "A synchronized version of Appium Javascript binding",
   "repository": {
@@ -18,18 +18,18 @@
     "selenium"
   ],
   "dependencies": {
-    "bluecat": "1.0.8",
+    "bluecat": "1.1.0",
     "chai": "^3.5.0",
-    "config": "^1.21.0"
+    "config": "^1.24.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --timeout 60000 test/"
   },
   "devDependencies": {
-    "mocha": "^2.5.3",
+    "mocha": "^3.2.0",
     "grunt-cli": "^1.2.0",
     "grunt": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
     "grunt-jscs": "^3.0.1"
   }
 }
