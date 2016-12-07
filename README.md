@@ -60,12 +60,14 @@ stay tuned, more to come...
 
 #### `setWaitTimeout(timeout)`
 #### `init(capabilities)`
-#### `findElements(locator, using)`
-#### `findElement(locator, using)`
-#### `clickElement(elementId)`
+#### `elements(locator, using)`
+#### `element(locator, using)`
+#### `elementClick(elementId)`
 #### `clickEl(locator, using, timeout)`
-#### `typeElement(value, elementId)`
+#### `elementType(value, elementId)`
 #### `typeEl(value, locator, using, timeout)`
+#### `elementAttribute(elementId, attributeName)`
+#### `source()`
 #### `quit()`
 #### `waitForElement(locator, using, timeout)`
 #### `sleep(ms)`
