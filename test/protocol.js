@@ -68,9 +68,9 @@ describe('Cyancat unit tests', function() {
     });
   });
 
-  it('findElements', function(done) {
+  it('elements', function(done) {
     t.run(function() {
-      var r = t.findElements('test locator');
+      var r = t.elements('test locator');
 
       // verify response
       expect(r.err).to.equal(null);
