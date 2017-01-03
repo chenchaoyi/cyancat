@@ -1,6 +1,6 @@
 {
   "name": "cyancat",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "ccy <ccy.chenchaoyi@gmail.com>",
   "description": "A synchronized version of Appium Javascript binding",
   "repository": {
@@ -18,7 +18,7 @@
     "selenium"
   ],
   "dependencies": {
-    "bluecat": "1.1.0",
+    "bluecat": "1.1.2",
     "chai": "^3.5.0",
     "config": "^1.24.0"
   },

@@ -79,7 +79,7 @@ stay tuned, more to come...
 ---
 
 ## Why the name
-Because **Cyancat** uses [Bluecat](https://github.com/chenchaoyi/bluecat) underlayer, and I expect tests written in Cyancat stay green... I know it's so cold.
+Because **Cyancat** uses [Bluecat](https://github.com/chenchaoyi/bluecat) underlayer, and I expect tests written in Cyancat stay green...
 
 ## License
 Licensed under the [MIT](http://opensource.org/licenses/MIT)
