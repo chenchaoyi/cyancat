@@ -1,6 +1,6 @@
 {
   "name": "cyancat",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "ccy <ccy.chenchaoyi@gmail.com>",
   "description": "A synchronized version of Appium Javascript binding",
   "repository": {
