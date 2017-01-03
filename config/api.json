@@ -18,6 +18,10 @@
           "schema": "http",
           "method": [ "GET" ]
         },
+        "keys": {
+          "schema": "http",
+          "method": [ "POST" ]
+        },
         "timeouts": {
           "schema": "http",
           "method": [ "POST" ]
